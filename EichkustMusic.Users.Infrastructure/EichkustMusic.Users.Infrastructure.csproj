@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="7.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EichkustMusic.Users.Application\EichkustMusic.Users.Application.csproj" />
   </ItemGroup>
 
