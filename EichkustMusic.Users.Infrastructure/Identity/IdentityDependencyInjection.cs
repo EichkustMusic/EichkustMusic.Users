@@ -14,12 +14,8 @@ namespace EichkustMusic.Users.Infrastructure.Identity
             services.AddIdentity<ApplicationUser, IdentityRole<int>>()
                 .AddEntityFrameworkStores<UsersDbContext>();
 
-            var secretKey = configuration["IdentityServer:SecretKey"];
-
-            if (secretKey == null)
-            {
-                throw new Exception("Secret key is null");
-            }
+            var secretKey = configuration["IdentityServer:SecretKey"]
+                ?? throw new Exception("Secret key is null");
 
             var identityConfiguration = new IdentityConfiguration(secretKey);
 

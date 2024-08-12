@@ -11,14 +11,14 @@ namespace EichkustMusic.Users.Infrastructure.Identity
             SecretKey = secretKey;   
         }
 
-        public List<ApiScope> Scopes { get; } = new List<ApiScope>
-        {
-            new ApiScope("accessAsUser", "Access as user"),
-            new ApiScope("accessAsAuthor", "Access as author")
-        };
+        public List<ApiScope> Scopes { get; } =
+        [
+            new ApiScope("access_as_user", "Access as user"),
+            new ApiScope("access_as_author", "Access as author")
+        ];
 
-        public List<ApiResource> Apis { get; } = new List<ApiResource>
-        {
+        public List<ApiResource> Apis { get; } =
+        [
             new ApiResource("eichkustMusic.apiGateway")
             {
                 ApiSecrets =
@@ -26,16 +26,16 @@ namespace EichkustMusic.Users.Infrastructure.Identity
                     new Secret(SecretKey.Sha256())
                 }
             }
-        };
+        ];
 
-        public List<IdentityResource> IdentityResources { get; } = new List<IdentityResource>
-        {
+        public List<IdentityResource> IdentityResources { get; } =
+        [
             new IdentityResources.OpenId(),
             new IdentityResources.Profile()
-        };
+        ];
 
-        public List<Client> Clients { get; } = new List<Client>
-        {
+        public List<Client> Clients { get; } =
+        [
             new Client()
             {
                 ClientId = "eichkustMusic.apiGateway",
@@ -49,6 +49,6 @@ namespace EichkustMusic.Users.Infrastructure.Identity
                     new Secret(SecretKey.Sha256())
                 }
             }
-        };
+        ];
     }
 }
