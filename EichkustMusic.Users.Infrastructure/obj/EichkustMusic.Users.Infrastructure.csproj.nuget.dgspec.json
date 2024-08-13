@@ -193,6 +193,10 @@
               "target": "Package",
               "version": "[7.0.6, )"
             },
+            "EichkustMusic.S3": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"

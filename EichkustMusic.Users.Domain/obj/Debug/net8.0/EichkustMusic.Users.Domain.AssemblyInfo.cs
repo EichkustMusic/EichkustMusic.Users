@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EichkustMusic.Users.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ee8c3d147a978d6bce95ee625f43bb538541538")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a33a9dbafe309e513870a2c4683bd7e037e71faf")]
 [assembly: System.Reflection.AssemblyProductAttribute("EichkustMusic.Users.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EichkustMusic.Users.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
