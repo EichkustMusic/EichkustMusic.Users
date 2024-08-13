@@ -3,6 +3,7 @@
   <ItemGroup>
     <PackageReference Include="Duende.IdentityServer.AspNetIdentity" Version="7.0.6" />
     <PackageReference Include="Duende.IdentityServer.EntityFramework" Version="7.0.6" />
+    <PackageReference Include="EichkustMusic.S3" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
   </ItemGroup>
