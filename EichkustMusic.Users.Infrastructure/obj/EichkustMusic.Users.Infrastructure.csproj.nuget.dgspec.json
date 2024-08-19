@@ -50,6 +50,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.JsonPatch": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -195,7 +201,7 @@
             },
             "EichkustMusic.S3": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.1.0, )"
             },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",

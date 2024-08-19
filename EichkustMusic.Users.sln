@@ -3,21 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EichkustMusic.Users.API", "EichkustMusic.Users.API\EichkustMusic.Users.API.csproj", "{22EC1857-C5EA-4218-9DC2-7380FE1FDA68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EichkustMusic.Users.API", "EichkustMusic.Users.API\EichkustMusic.Users.API.csproj", "{22EC1857-C5EA-4218-9DC2-7380FE1FDA68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EichkustMusic.Users.Application", "EichkustMusic.Users.Application\EichkustMusic.Users.Application.csproj", "{105B1090-8FFC-41A4-872F-5E0BC88CD92E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EichkustMusic.Users.Application", "EichkustMusic.Users.Application\EichkustMusic.Users.Application.csproj", "{105B1090-8FFC-41A4-872F-5E0BC88CD92E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EichkustMusic.Users.Domain", "EichkustMusic.Users.Domain\EichkustMusic.Users.Domain.csproj", "{1351ECF5-C079-407D-BE5E-BE21A9FEB864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EichkustMusic.Users.Domain", "EichkustMusic.Users.Domain\EichkustMusic.Users.Domain.csproj", "{1351ECF5-C079-407D-BE5E-BE21A9FEB864}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EichkustMusic.Users.Infrastructure", "EichkustMusic.Users.Infrastructure\EichkustMusic.Users.Infrastructure.csproj", "{594DBB68-8A63-4DB0-950D-6342CD52933D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EichkustMusic.Users.Infrastructure", "EichkustMusic.Users.Infrastructure\EichkustMusic.Users.Infrastructure.csproj", "{594DBB68-8A63-4DB0-950D-6342CD52933D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EichkustMusic.Users.Tests", "EichkustMusic.Users.Tests\EichkustMusic.Users.Tests.csproj", "{4D57D015-7BB2-41D2-A541-40D9F253D7DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{22EC1857-C5EA-4218-9DC2-7380FE1FDA68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -36,5 +35,15 @@ Global
 		{594DBB68-8A63-4DB0-950D-6342CD52933D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{594DBB68-8A63-4DB0-950D-6342CD52933D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{594DBB68-8A63-4DB0-950D-6342CD52933D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D57D015-7BB2-41D2-A541-40D9F253D7DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D57D015-7BB2-41D2-A541-40D9F253D7DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D57D015-7BB2-41D2-A541-40D9F253D7DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D57D015-7BB2-41D2-A541-40D9F253D7DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC2070C7-B18C-487A-AFFF-1973F12746D7}
 	EndGlobalSection
 EndGlobal
