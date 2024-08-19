@@ -25,13 +25,13 @@ namespace EichkustMusic.Users.Domain.Entities
             = new List<PublisherSubscriber>();
 
         public IEnumerable<ApplicationUser> Subscriptions
-        {
-            get => SubscriptionsM2M.Select(m2m => m2m.Publisher);
-        }
+            => SubscriptionsM2M.Select(m2m => m2m.Publisher);
 
         public IEnumerable<ApplicationUser> Subscribers
-        {
-            get => SubsribersM2M.Select(m2m => m2m.Subscriber);
-        }
+            => SubsribersM2M.Select(m2m => m2m.Subscriber);
+
+        public int SubscriptionsCount => Subscriptions.Count();
+
+        public int SubscribersCount => Subscribers.Count();
     }
 }
