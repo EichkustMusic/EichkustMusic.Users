@@ -121,7 +121,7 @@
           }
         }
       },
-      "EichkustMusic.S3/1.0.0": {
+      "EichkustMusic.S3/1.1.0": {
         "type": "package",
         "dependencies": {
           "AWSSDK.S3": "3.7.400.4",
@@ -1358,15 +1358,15 @@
         "lib/net8.0/Duende.IdentityServer.Storage.xml"
       ]
     },
-    "EichkustMusic.S3/1.0.0": {
-      "sha512": "Ae2vvZ6ni5CPoWnaho71LhnCg7TnxJErb9FJJTq03HE4lNE1pLiGWrCi3RAqvBPpe/vCnzru3nftAQyuSn1CIA==",
+    "EichkustMusic.S3/1.1.0": {
+      "sha512": "J/OlLxnDi9Yi05jzPWHLDwO9hrpxlbiU9GLmZI5j2DY0xSI1wNgjqG32pNFmsPbj2hOn1EK/N9kpSEHovJyCyQ==",
       "type": "package",
-      "path": "eichkustmusic.s3/1.0.0",
+      "path": "eichkustmusic.s3/1.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "eichkustmusic.s3.1.0.0.nupkg.sha512",
+        "eichkustmusic.s3.1.1.0.nupkg.sha512",
         "eichkustmusic.s3.nuspec",
         "lib/net8.0/EichkustMusic.S3.dll"
       ]
@@ -2841,7 +2841,7 @@
     "net8.0": [
       "Duende.IdentityServer.AspNetIdentity >= 7.0.6",
       "Duende.IdentityServer.EntityFramework >= 7.0.6",
-      "EichkustMusic.S3 >= 1.0.0",
+      "EichkustMusic.S3 >= 1.1.0",
       "EichkustMusic.Users.Application >= 1.0.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.4"
@@ -2907,7 +2907,7 @@
           },
           "EichkustMusic.S3": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.1.0, )"
           },
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",

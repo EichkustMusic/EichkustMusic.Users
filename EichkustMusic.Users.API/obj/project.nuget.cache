@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Nrkoq/+39nI=",
+  "dgSpecHash": "x+QtR/WliBY=",
   "success": true,
   "projectFilePath": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.API\\EichkustMusic.Users.API.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\malvl\\.nuget\\packages\\duende.identityserver.entityframework\\7.0.6\\duende.identityserver.entityframework.7.0.6.nupkg.sha512",
     "C:\\Users\\malvl\\.nuget\\packages\\duende.identityserver.entityframework.storage\\7.0.6\\duende.identityserver.entityframework.storage.7.0.6.nupkg.sha512",
     "C:\\Users\\malvl\\.nuget\\packages\\duende.identityserver.storage\\7.0.6\\duende.identityserver.storage.7.0.6.nupkg.sha512",
-    "C:\\Users\\malvl\\.nuget\\packages\\eichkustmusic.s3\\1.0.0\\eichkustmusic.s3.1.0.0.nupkg.sha512",
+    "C:\\Users\\malvl\\.nuget\\packages\\eichkustmusic.s3\\1.1.0\\eichkustmusic.s3.1.1.0.nupkg.sha512",
     "C:\\Users\\malvl\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\malvl\\.nuget\\packages\\identitymodel\\6.2.0\\identitymodel.6.2.0.nupkg.sha512",
     "C:\\Users\\malvl\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

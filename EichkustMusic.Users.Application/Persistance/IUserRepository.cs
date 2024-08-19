@@ -1,4 +1,5 @@
 ﻿using EichkustMusic.Users.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.JsonPatch;
 
 namespace EichkustMusic.Users.Application.UserRepository
@@ -7,7 +8,7 @@ namespace EichkustMusic.Users.Application.UserRepository
     {
         Task<ApplicationUser?> GetUserByIdAsync(int id);
 
-        Task<ApplicationUser> RegisterUserAsync(ApplicationUser user, string password);
+        Task<IEnumerable<IdentityError>?> RegisterUserAsync(ApplicationUser user, string password);
 
         // Description must be shortened!
         Task<ICollection<ApplicationUser>> ListUsersAsync(
@@ -17,11 +18,11 @@ namespace EichkustMusic.Users.Application.UserRepository
         Task ApplyPatchDocumentAsyncTo(ApplicationUser user, JsonPatchDocument patchDocument);
 
         // Files must be deleted from S3
-        Task DeleteUser(ApplicationUser user);  
+        Task DeleteUserAsync(ApplicationUser user);  
 
         void AddSubscription(ApplicationUser subscriber, ApplicationUser publisher);
 
-        void DeleteSubscription(ApplicationUser subscriber, ApplicationUser publisher);
+        Task<bool> DeleteSubscriptionAsync(ApplicationUser subscriber, ApplicationUser publisher);
 
         Task SaveChangesAsync();
     }

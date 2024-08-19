@@ -17,11 +17,11 @@ namespace EichkustMusic.Users.Domain.Entities
         public string DisplayName { get; set; } = null!;
 
         [InverseProperty(nameof(PublisherSubscriber.Publisher))]
-        public IEnumerable<PublisherSubscriber> SubscriptionsM2M { get; set; }
+        public ICollection<PublisherSubscriber> SubscriptionsM2M { get; set; }
             = new List<PublisherSubscriber>();
 
         [InverseProperty(nameof(PublisherSubscriber.Subscriber))]
-        public IEnumerable<PublisherSubscriber> SubsribersM2M { get; set; }
+        public ICollection<PublisherSubscriber> SubsribersM2M { get; set; }
             = new List<PublisherSubscriber>();
 
         public IEnumerable<ApplicationUser> Subscriptions
