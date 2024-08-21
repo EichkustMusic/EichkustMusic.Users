@@ -4,49 +4,53 @@ namespace EichkustMusic.Users.Infrastructure.Identity
 {
     public class IdentityConfiguration
     {
-        static string SecretKey { get; set; } = null!;
+        private readonly string _secretKey;
 
         public IdentityConfiguration(string secretKey)
         {
-            SecretKey = secretKey;   
+            _secretKey = secretKey;   
         }
 
-        public List<ApiScope> Scopes { get; } =
+        public List<ApiScope> GetScopes() =>
         [
-            new ApiScope("access_as_user", "Access as user"),
-            new ApiScope("access_as_author", "Access as author")
+            new ApiScope("api_gateway.access_as_user"),
+            new ApiScope("api_gateway.access_as_author")
         ];
 
-        public List<ApiResource> Apis { get; } =
+        public List<ApiResource> GetApis() =>
         [
-            new ApiResource("eichkustMusic.apiGateway")
+            new ApiResource("api_gateway")
             {
                 ApiSecrets =
                 {
-                    new Secret(SecretKey.Sha256())
+                    new Secret(_secretKey.Sha256())
+                },
+                Scopes =
+                {
+                    "api_gateway.access_as_user", "api_gateway.access_as_author"
                 }
             }
         ];
 
-        public List<IdentityResource> IdentityResources { get; } =
+        public List<IdentityResource> GetIdentityResources() =>
         [
             new IdentityResources.OpenId(),
             new IdentityResources.Profile()
         ];
 
-        public List<Client> Clients { get; } =
+        public List<Client> GetClients() =>
         [
             new Client()
             {
-                ClientId = "eichkustMusic.apiGateway",
+                ClientId = "api_gateway",
                 AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                 AllowedScopes =
                 {
-                    "accessAsUser", "accessAsAuthor"
+                    "api_gateway.access_as_user", "apiGateway.access_as_author"
                 },
                 ClientSecrets =
                 {
-                    new Secret(SecretKey.Sha256())
+                    new Secret(_secretKey.Sha256())
                 }
             }
         ];

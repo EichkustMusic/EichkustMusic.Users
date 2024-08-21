@@ -105,17 +105,6 @@ namespace EichkustMusic.Users.Infrastructure.Persistance
             // Search users by query by description, username and display name
             if (query != null)
             {
-                //users = users.Where(user =>
-
-                //    user.Desciption != null
-                //        ? user.Desciption.Contains(query, StringComparison.CurrentCultureIgnoreCase)
-                //        : false
-
-                //    || user.UserName != null
-                //        ? user.UserName.Contains(query, StringComparison.CurrentCultureIgnoreCase)
-                //        : false
-
-                //    || user.DisplayName.Contains(query, StringComparison.CurrentCultureIgnoreCase));
                 users = users.Where(user =>
 
                     user.Desciption != null

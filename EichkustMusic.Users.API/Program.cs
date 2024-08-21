@@ -6,6 +6,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 
+builder.Services
+    .AddControllers()
+    .AddNewtonsoftJson();
+
 builder.Services.AddPersistace(builder.Configuration);
 
 builder.Services.AddIdentityServices(builder.Configuration);
@@ -17,5 +21,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseIdentityServer();
+
+app.MapControllers();
 
 app.Run();

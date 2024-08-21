@@ -20,10 +20,10 @@ namespace EichkustMusic.Users.Infrastructure.Identity
             var identityConfiguration = new IdentityConfiguration(secretKey);
 
             services.AddIdentityServer()
-                .AddInMemoryClients(identityConfiguration.Clients)
-                .AddInMemoryIdentityResources(identityConfiguration.IdentityResources)
-                .AddInMemoryApiResources(identityConfiguration.Apis)
-                .AddInMemoryApiScopes(identityConfiguration.Scopes)
+                .AddInMemoryClients(identityConfiguration.GetClients())
+                .AddInMemoryIdentityResources(identityConfiguration.GetIdentityResources())
+                .AddInMemoryApiResources(identityConfiguration.GetApis())
+                .AddInMemoryApiScopes(identityConfiguration.GetScopes())
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddDeveloperSigningCredential();
 
