@@ -22,6 +22,9 @@ namespace EichkustMusic.Users.Application.Models
         [MaxLength(64)]
         public string DisplayName { get; set; } = null!;
 
+        [Required]
+        public string Password { get; set; } = null!;
+
         public ApplicationUser MapToApplicationUser()
         {
             return new ApplicationUser()
