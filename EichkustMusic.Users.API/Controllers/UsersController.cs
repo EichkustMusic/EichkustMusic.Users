@@ -122,5 +122,102 @@ namespace EichkustMusic.Users.API.Controllers
 
             return NoContent();
         }
+
+        [HttpPost("{subscriberId}/subscribe_to/{publisherId}")]
+        public async Task<ActionResult> SubscribeToUser(int subscriberId, int publisherId)
+        {
+            var subscriber = await _userRepository.GetUserByIdAsync(subscriberId);
+
+            if (subscriber == null)
+            {
+                return NotFound(nameof(subscriberId));
+            }
+
+            var publisher = await _userRepository.GetUserByIdAsync(publisherId);
+
+            if (publisher == null)
+            {
+                return NotFound(nameof(publisherId));
+            }
+
+            var isSuccessful = await _userRepository.AddSubscriptionAsync(subscriber, publisher);
+
+            if (isSuccessful == false)
+            {
+                return BadRequest("User is already subscribed");
+            }
+
+            await _userRepository.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{subscriberId}/unsubscribe_from/{publisherId}")]
+        public async Task<ActionResult> UnsubscribeFrom(int subscriberId, int publisherId)
+        {
+            var subscriber = await _userRepository.GetUserByIdAsync(subscriberId);
+
+            if (subscriber == null)
+            {
+                return NotFound(nameof(subscriberId));
+            }
+
+            var publisher = await _userRepository.GetUserByIdAsync(publisherId);
+
+            if (publisher == null)
+            {
+                return NotFound(nameof(publisherId));
+            }
+
+            await _userRepository.DeleteSubscriptionAsync(subscriber, publisher);
+
+            await _userRepository.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        [HttpGet("{id}/subscribers")]
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetSubscribers(int id)
+        {
+            var user = await _userRepository.GetUserByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound(nameof(id));
+            }
+
+            var subscriberDtos = new List<UserDto>();
+
+            foreach (var subscriber in user.Subscribers)
+            {
+                var subscriberDto = UserDto.MapFromApplicationUser(subscriber);
+
+                subscriberDtos.Add(subscriberDto);
+            }
+
+            return Ok(subscriberDtos);
+        }
+
+        [HttpGet("{id}/subscriptions")]
+        public async Task<ActionResult<IEnumerable<UserDto>>> GetSubscriptions(int id)
+        {
+            var user = await _userRepository.GetUserByIdAsync(id);
+
+            if (user == null)
+            {
+                return NotFound(nameof(id));
+            }
+
+            var subscriptionDtos = new List<UserDto>();
+
+            foreach (var subscription in user.Subscriptions)
+            {
+                var subscriberDto = UserDto.MapFromApplicationUser(subscription);
+
+                subscriptionDtos.Add(subscriberDto);
+            }
+
+            return Ok(subscriptionDtos);
+        }
     }
 }
