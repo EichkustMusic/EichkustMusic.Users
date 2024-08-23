@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{22EC1857-C5EA-4218-9DC2-7380FE1FDA68}|EichkustMusic.Users.API\\EichkustMusic.Users.API.csproj|c:\\users\\malvl\\vladimir\\code\\eichkustmusic\\eichkustmusic.users\\eichkustmusic.users.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{22EC1857-C5EA-4218-9DC2-7380FE1FDA68}|EichkustMusic.Users.API\\EichkustMusic.Users.API.csproj|solutionrelative:eichkustmusic.users.api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{594DBB68-8A63-4DB0-950D-6342CD52933D}|EichkustMusic.Users.Infrastructure\\EichkustMusic.Users.Infrastructure.csproj|c:\\users\\malvl\\vladimir\\code\\eichkustmusic\\eichkustmusic.users\\eichkustmusic.users.infrastructure\\persistance\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{594DBB68-8A63-4DB0-950D-6342CD52933D}|EichkustMusic.Users.Infrastructure\\EichkustMusic.Users.Infrastructure.csproj|solutionrelative:eichkustmusic.users.infrastructure\\persistance\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{105B1090-8FFC-41A4-872F-5E0BC88CD92E}|EichkustMusic.Users.Application\\EichkustMusic.Users.Application.csproj|c:\\users\\malvl\\vladimir\\code\\eichkustmusic\\eichkustmusic.users\\eichkustmusic.users.application\\persistance\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{105B1090-8FFC-41A4-872F-5E0BC88CD92E}|EichkustMusic.Users.Application\\EichkustMusic.Users.Application.csproj|solutionrelative:eichkustmusic.users.application\\persistance\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 127,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +51,43 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.Infrastructure\\Persistance\\UserRepository.cs",
+              "RelativeDocumentMoniker": "EichkustMusic.Users.Infrastructure\\Persistance\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.Infrastructure\\Persistance\\UserRepository.cs",
+              "RelativeToolTip": "EichkustMusic.Users.Infrastructure\\Persistance\\UserRepository.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAApwGwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T06:39:19.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.Application\\Persistance\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "EichkustMusic.Users.Application\\Persistance\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.Application\\Persistance\\IUserRepository.cs",
+              "RelativeToolTip": "EichkustMusic.Users.Application\\Persistance\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T06:38:04.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "EichkustMusic.Users.API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\malvl\\Vladimir\\Code\\EichkustMusic\\EichkustMusic.Users\\EichkustMusic.Users.API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "EichkustMusic.Users.API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAYwMYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-23T06:08:30.071Z",
+              "EditorCaption": ""
             }
           ]
         },

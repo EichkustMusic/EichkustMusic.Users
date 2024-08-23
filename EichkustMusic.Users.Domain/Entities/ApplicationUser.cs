@@ -20,18 +20,23 @@ namespace EichkustMusic.Users.Domain.Entities
         public ICollection<PublisherSubscriber> SubscriptionsM2M { get; set; }
             = new List<PublisherSubscriber>();
 
+        // TODO: Rename to subscribers
         [InverseProperty(nameof(PublisherSubscriber.Subscriber))]
         public ICollection<PublisherSubscriber> SubsribersM2M { get; set; }
             = new List<PublisherSubscriber>();
 
+        [NotMapped]
         public IEnumerable<ApplicationUser> Subscriptions
             => SubscriptionsM2M.Select(m2m => m2m.Publisher);
 
+        [NotMapped]
         public IEnumerable<ApplicationUser> Subscribers
             => SubsribersM2M.Select(m2m => m2m.Subscriber);
 
+        [NotMapped]
         public int SubscriptionsCount => Subscriptions.Count();
 
+        [NotMapped]
         public int SubscribersCount => Subscribers.Count();
     }
 }

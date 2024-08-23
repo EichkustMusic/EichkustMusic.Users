@@ -20,10 +20,9 @@ namespace EichkustMusic.Users.Application.UserRepository
         // Files must be deleted from S3
         Task DeleteUserAsync(ApplicationUser user);  
 
-        void AddSubscription(ApplicationUser subscriber, ApplicationUser publisher);
+        Task<bool> AddSubscriptionAsync(ApplicationUser subscriber, ApplicationUser publisher);
 
         Task<bool> DeleteSubscriptionAsync(ApplicationUser subscriber, ApplicationUser publisher);
-
         Task SaveChangesAsync();
     }
 }

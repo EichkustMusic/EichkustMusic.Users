@@ -21,8 +21,18 @@ namespace EichkustMusic.Users.Infrastructure.Persistance
             _s3 = s3;
         }
 
-        public void AddSubscription(ApplicationUser subscriber, ApplicationUser publisher)
+        public async Task<bool> AddSubscriptionAsync(ApplicationUser subscriber, ApplicationUser publisher)
         {
+            var doesSubscriptionExist = await _context.PublisherSubscribers
+                .AnyAsync(publisherSubscriber =>
+                    publisherSubscriber.Subscriber == subscriber
+                    && publisherSubscriber.Publisher == publisher);
+
+            if (doesSubscriptionExist == true)
+            {
+                return false;
+            }
+
             var subscription = new PublisherSubscriber()
             {
                 Subscriber = subscriber,
@@ -30,6 +40,8 @@ namespace EichkustMusic.Users.Infrastructure.Persistance
             };
 
             _context.Add(subscription);
+
+            return true;
         }
 
         public async Task ApplyPatchDocumentAsyncTo(ApplicationUser user, JsonPatchDocument patchDocument)
@@ -91,9 +103,11 @@ namespace EichkustMusic.Users.Infrastructure.Persistance
             await _userManager.DeleteAsync(user);
         }
 
-        public Task<ApplicationUser?> GetUserByIdAsync(int id)
+        public async Task<ApplicationUser?> GetUserByIdAsync(int id)
         {
-            return _userManager.Users
+            return await _userManager.Users
+                .Include(user => user.SubscriptionsM2M)
+                .Include(user => user.SubsribersM2M)
                 .FirstOrDefaultAsync(user => user.Id == id);
         }
 
