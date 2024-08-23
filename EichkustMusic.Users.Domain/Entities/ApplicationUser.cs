@@ -22,7 +22,7 @@ namespace EichkustMusic.Users.Domain.Entities
 
         // TODO: Rename to subscribers
         [InverseProperty(nameof(PublisherSubscriber.Subscriber))]
-        public ICollection<PublisherSubscriber> SubsribersM2M { get; set; }
+        public ICollection<PublisherSubscriber> SubscribersM2M { get; set; }
             = new List<PublisherSubscriber>();
 
         [NotMapped]
@@ -31,7 +31,7 @@ namespace EichkustMusic.Users.Domain.Entities
 
         [NotMapped]
         public IEnumerable<ApplicationUser> Subscribers
-            => SubsribersM2M.Select(m2m => m2m.Subscriber);
+            => SubscribersM2M.Select(m2m => m2m.Subscriber);
 
         [NotMapped]
         public int SubscriptionsCount => Subscriptions.Count();
